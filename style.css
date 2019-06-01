@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'Nicholson Gothic';
+src:
+       url('https://cdn.glitch.com/14207c62-dbf3-4d0f-a9e4-de8e2a66de91%2FNicholsonGothic-Regular.woff2?1559092926928') format('woff2'), /* Super Modern Browsers */
+       url('https://cdn.glitch.com/14207c62-dbf3-4d0f-a9e4-de8e2a66de91%2FNicholsonGothic-Regular.woff?1559092926866') format('woff'); /* Pretty Modern Browsers */
+}
+
+
+
+html, body {
+font-family: "Nicholson Gothic";
+background-color: ghostwhite;
+margin: 0;
+overflow-x: hidden;
+}
+
+#logo {
+position: absolute;
+width: 120px;
+z-index: 999;
+top: 20px;
+left: 20px;
+}
+
+.nav {
+position: absolute;
+top: 20px;
+right: 20px;
+z-index: 999;
+}
+
+.nav a {
+background-color: ghostwhite;
+padding: 5px;
+}
+
+#logo:hover {
+cursor: pointer;
+}
+
+.desktop img {
+position: absolute;
+user-select: none;
+transition: .333s;
+}
+
+.mauve {
+background-color: seagreen;
+}
+
+.yellow {
+background-color: navy;
+}
+
+.workimg {
+  pointer-events: none;
+  filter: brightness(0);
+-webkit-transform: translateZ(0);
+}
+
+.info {
+position: absolute;
+z-index: 99;
+color: white;
+display: none;
+font-size: 3.5vw;
+padding: 60px;
+padding-top: 100px;
+width: 100vw;
+max-width: 100%;
+height: 100vh;
+box-sizing: border-box;
+}
+
+.show {
+display: block!important;
+}
+
+.imghide {
+filter: blur(20px);
+opacity: .9;
+pointer-events: none;
+-webkit-transform: translateZ(0);
+}
+
+a {
+color: navy;
+text-decoration: none;
+}
+
+.work {
+display: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+ul {
+position: absolute;
+font-size: 1.5em;
+font-family: "Nicholson Gothic";
+list-style: none;
+padding: 50px;
+padding-top: 70px;
+z-index: 99;
+}
+
+li {
+padding: 10px;
+display: inline-block;
+color: ghostwhite;
+}
+
+li:hover {
+cursor: pointer;
+text-decoration: underline;
+}
+
+ul>li:nth-child(odd){
+    color: cornflowerblue;
+}
+
+@media screen and (max-width: 600px) {
+  .desktop img {
+width: 30vw!important;
+}
+
+.info {
+font-size: 1.5em;
+}
+}
