@@ -10,8 +10,8 @@ $.fn.toggleText = function(t1, t2){
 
 function rand(){
 $( ".desktop img" ).each(function( index ) {
-  var w = window.innerWidth-200;
-  var h = window.innerHeight-200;
+  var w = window.innerWidth-100;
+  var h = window.innerHeight-100;
   $(this).css('top', Math.floor(Math.random() * h) + 0);
   $(this).css('left', Math.floor(Math.random() * w) + 0);
   $(this).css('width', Math.floor(Math.random() * 15) + 6+"vw");
@@ -44,15 +44,7 @@ $( "#work" ).click(function() {
   $(".info").removeClass("show");
   $("#about").html('About');
 
-  $("img").each(function(i, elem){
 
-if ($(this).attr("src") == "http://google.com"){
-
-$(this).attr("src", "http://yahoo.com");
-
-}
-
-});
 });
 
 
