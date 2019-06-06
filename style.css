@@ -42,6 +42,11 @@ cursor: pointer;
 position: absolute;
 user-select: none;
 transition: .333s;
+transition-property: top, left;
+}
+
+.desktop img:hover {
+  z-index: 9999!important;
 }
 
 .mauve {
