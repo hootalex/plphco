@@ -29,6 +29,10 @@ right: 20px;
 z-index: 999;
 }
 
+.nav:hover{
+  z-index: 9999;
+}
+
 .nav a {
 background-color: ghostwhite;
 padding: 5px;

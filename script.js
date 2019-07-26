@@ -14,7 +14,7 @@ $( ".desktop img" ).each(function( index ) {
   var h = window.innerHeight-100;
   $(this).css('top', Math.floor(Math.random() * h) + 0);
   $(this).css('left', Math.floor(Math.random() * w) + 0);
-  $(this).css('width', Math.floor(Math.random() * 15) + 6+"vw");
+  $(this).css('width', Math.floor(Math.random() * 16) + 7+"vw");
 $(this).css('z-index', Math.floor(Math.random() * 20) + 0);
 });
 }
