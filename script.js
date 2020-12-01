@@ -28,7 +28,8 @@ var colors = [
   "blue",
   "brown",
   "black",
-  "yellow"
+  "orange",
+  "purple"
 ];
 
 var stat = [

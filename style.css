@@ -1,13 +1,13 @@
 :root {
     --black: #000000;
     --white: #ffffff;
-    --red: #e5332a;
-    --yellow: #ffdd00;
-    --blue: #2094d2;
-    --green: #009572;
+    --red: #e00015;
+    --orange: #fca43c;
+    --blue: #1385ff;
+    --green: #008d88;
     --wood: #663d16;
     --navy: #112b5a;
-    --purple: #57327d;
+    --purple: #672e40;
     --gray: #4c4545;
 }
 
@@ -180,8 +180,8 @@ background-color: var(--purple);
 background-color: var(--black);
     }
 
-    .yellow {
-background-color: var(--yellow);
+    .orange {
+background-color: var(--orange);
       color: black;
     }
 
