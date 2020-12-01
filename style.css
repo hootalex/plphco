@@ -1,4 +1,14 @@
-/* CSS files add styling rules to your content */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --red: #e5332a;
+    --blue: #2094d2;
+    --green: #2b8029;
+    --wood: #663d16;
+    --navy: #112b5a;
+    --purple: #57327d;
+    --gray: #4c4545;
+}
 
 body {
   font-family: helvetica neue, helvetica, arial, sans-serif;
@@ -125,30 +135,34 @@ opacity: 0;
 }
 
   .red {
-background-color: #ec0101;
+background-color: var(--red);
     }
     
     .green {
-background-color: #00852c;
+background-color: var(--green);
 }
     
     .blue {
-background-color: #1963fb;
+background-color: var(--blue);
 }
 
         .gray {
-background-color: #474242;
+background-color: var(--gray);
 }
     
         .brown {
-background-color: #5e2e18;
+background-color: var(--brown);
 }
     .purple {
-background-color: #C36366;
+background-color: var(--purple);
     }
 
     .black {
-background-color: transparent;
+background-color: var(--black);
+    }
+
+    .navy {
+background-color: var(--navy);
     }
 
 .head {
@@ -163,5 +177,14 @@ font-size: 13px;
   .trk, .train, .line {
 display: none;
   }
+  
+  .col {
+font-size: 14px;
+}
+  
+      .col div {
+  padding: 15px;
+
+}
   
 }

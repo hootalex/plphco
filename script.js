@@ -10,10 +10,15 @@ var sound = new Howl({
 
 
 var featured = [
+  
+["This Website", "Website", "2020", "https://polyphony.nyc"], 
 
 ["Whirly Birdie", "Typeface/Website", "2020", "https://whirlybirdie.com"],
   
-["Cooper IDS", "Identity", "2017", "https://fontsinuse.com/uses/18491/the-cooper-union-intra-disciplinary-seminar-f"],
+["Cooper IDS", "Posters/Identity", "2017", "https://fontsinuse.com/uses/18491/the-cooper-union-intra-disciplinary-seminar-f"],
+  
+["ids.cooper.org", "Website", "2017", "https://fontsinuse.com/uses/18490/the-cooper-union-intra-disciplinary-seminar-w"]
+
   
 ];
 
@@ -23,7 +28,8 @@ var colors = [
   "blue",
   "brown",
   "purple",
-  "black"
+  "black",
+  "navy"
 ];
 
 var stat = [
@@ -34,6 +40,7 @@ var stat = [
   "thinking",
   "eating",
   "early",
+  "reading",
   ""
 ];
 
