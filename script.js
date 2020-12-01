@@ -1,60 +1,111 @@
-$( document ).ready(function() {
-
-$("body").ready(rand);
-
-$.fn.toggleText = function(t1, t2){
-  if (this.text() == t1) this.text(t2);
-  else                   this.text(t1);
-  return this;
-};
-
-function rand(){
-$( ".desktop img" ).each(function( index ) {
-  var w = window.innerWidth-200;
-  var h = window.innerHeight-200;
-  $(this).css('top', Math.floor(Math.random() * h) + 0);
-  $(this).css('left', Math.floor(Math.random() * w) + 0);
-  $(this).css('width', Math.floor(Math.random() * 15) + 6+"vw");
-$(this).css('z-index', Math.floor(Math.random() * 20) + 0);
-});
+function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-$('*').click(rand);
-
-$( "#about" ).click(function() {
-  $(".info").toggleClass("show");
-  $( ".desktop img, ul" ).toggleClass("imghide");
-  $( "html, body" ).toggleClass("mauve");
-  $(this).toggleText('x', 'About');
-
-    $(".work").removeClass("show");
-  $("#work").html('Work');
-  $( "html, body" ).removeClass("yellow");
-  $( ".desktop img" ).removeClass("workimg");
+var sound = new Howl({
+  src: ['https://cdn.glitch.com/027fcb2b-a763-4ba3-a720-c1af63dda48c%2Fgrandcentral.mp3?v=1606839806134'],
+  loop: true,
+  volume: 0.5
 });
 
-$( "#work" ).click(function() {
-  $(".work").toggleClass("show");
-  $(this).toggleText('x', 'Work');
-  $( "html, body" ).toggleClass("yellow");
-  $( ".desktop img" ).toggleClass("workimg");
 
-  $( ".desktop img, ul" ).removeClass("imghide");
-  $( "html, body" ).removeClass("mauve");
-  $(".info").removeClass("show");
-  $("#about").html('About');
+var featured = [
 
-  $("img").each(function(i, elem){
+["Whirly Birdie", "Typeface/Website", "2020", "https://whirlybirdie.com"],
+  
+["Cooper IDS", "Identity", "2017", "https://fontsinuse.com/uses/18491/the-cooper-union-intra-disciplinary-seminar-f"],
+  
+];
 
-if ($(this).attr("src") == "http://google.com"){
+var colors = [
+  "red",
+  "green",
+  "blue",
+  "brown",
+  "purple",
+  "black"
+];
 
-$(this).attr("src", "http://yahoo.com");
+var stat = [
+  "all aboard",
+  "sleeping",
+  "on time",
+  "<span class='blink'>blinking</span>",
+  "thinking",
+  "eating",
+  "early"
+];
+
+jQuery.each(featured, function(index, value) {
+  $('.projects').append("<a href="+value[3]+">"+"<div class='col zo "+colors[Math.floor(Math.random() * colors.length)]+"'><div class='dep dd'></div><div class='title'>"+value[0]+"</div><div class='trk'>"+randomIntFromInterval(1, 67)+"</div><div class='line'>"+value[1]+"</div><div class='train'>"+value[2]+"</div><div class='status ds'></div></div>"+"</a>")
+});
+
+function handler1() {
+  $("#sound").addClass("animate");
+      $(this).one("click", handler2);
+  sound.play();
+}
+function handler2() {
+   $("#sound").removeClass("animate");
+      $(this).one("click", handler1);
+  sound.pause();
+
 
 }
+$("#sound").one("click", handler1);
 
+function gettimes() {
+
+var timecode = moment().format('h:mm:ss A');
+
+$(".t").html(timecode)
+
+
+$('.dd').each(function(index, value) {
+  $(this).html(moment().add(11*index+1, 'minutes').format('LT'))
 });
-});
+  
+}
+
+gettimes()
+
+setInterval(gettimes,1000)
 
 
 
-});
+        function getstatus() {
+          $(".ds").each(function(i) {
+            var elm = $(this);
+            setTimeout(function() {
+              elm.html(stat[Math.floor(Math.random() * stat.length)]);
+            }, i * 50);
+          });
+        }
+
+        function removetransparency() {
+          $(".col").each(function(i) {
+            var elm = $(this);
+            setTimeout(function() {
+              elm.removeClass("zo");
+            }, i * 50);
+          });
+        }
+
+        function addtransparency() {
+          $(".col").each(function(i) {
+            var elm = $(this);
+            setTimeout(function() {
+              elm.addClass("zo");
+            }, i * 5);
+          });
+        }
+
+removetransparency()
+
+getstatus()
+
+setInterval(getstatus,10000)
+
+//flicker
+setInterval(addtransparency,50000)
+setInterval(removetransparency,50000)
