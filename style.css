@@ -18,6 +18,23 @@ body {
 -moz-osx-font-smoothing: grayscale;
   background-color: black;
   color: white;
+/*   
+  font-smooth: never;
+-webkit-font-smoothing : none; */
+}
+
+.cover {
+position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  pointer-events: none;
+    background: url("https://cdn.glitch.com/027fcb2b-a763-4ba3-a720-c1af63dda48c%2Frepeat.gif?v=1606856567510");
+    background-size: 2px 2px;
+  opacity: .3;
+  display: none;
 }
 
 a {
@@ -30,8 +47,9 @@ color: white;
   user-select: none;
 }
 
-#sound:hover {
+#sound:hover, .navicon:hover {
   opacity: .8;
+  font-variation-settings: "anim" 200;
 }
 
 .animate {
