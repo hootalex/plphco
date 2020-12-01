@@ -33,7 +33,8 @@ var stat = [
   "<span class='blink'>blinking</span>",
   "thinking",
   "eating",
-  "early"
+  "early",
+  ""
 ];
 
 jQuery.each(featured, function(index, value) {
