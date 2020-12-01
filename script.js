@@ -27,9 +27,8 @@ var colors = [
   "green",
   "blue",
   "brown",
-  "purple",
   "black",
-  "navy"
+  "yellow"
 ];
 
 var stat = [
@@ -45,7 +44,7 @@ var stat = [
 ];
 
 jQuery.each(featured, function(index, value) {
-  $('.projects').append("<a href="+value[3]+">"+"<div class='col zo "+colors[Math.floor(Math.random() * colors.length)]+"'><div class='dep dd'></div><div class='title'>"+value[0]+"</div><div class='trk'>"+randomIntFromInterval(1, 67)+"</div><div class='line'>"+value[1]+"</div><div class='train'>"+value[2]+"</div><div class='status ds'></div></div>"+"</a>")
+  $('.projects').append("<a href="+value[3]+">"+"<div class='col zo "+colors[Math.floor(Math.random() * colors.length)]+"'><div class='dep dd'></div><div class='title'>"+value[0]+"</div><div class='trk'></div><div class='line'>"+value[1]+"</div><div class='train'>"+value[2]+"</div><div class='status ds'></div></div>"+"</a>")
 });
 
 function handler1() {
@@ -78,6 +77,18 @@ $('.dd').each(function(index, value) {
 gettimes()
 
 setInterval(gettimes,1000)
+
+
+        function gettrack() {
+          $(".td").each(function(i) {
+            var elm = $(this);
+            setTimeout(function() {
+              elm.html(randomIntFromInterval(1, 67));
+            }, i * 50500);
+          });
+        }
+
+gettrack()
 
 
 

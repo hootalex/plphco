@@ -2,6 +2,7 @@
     --black: #000000;
     --white: #ffffff;
     --red: #e5332a;
+    --yellow: #ffdd00;
     --blue: #2094d2;
     --green: #2b8029;
     --wood: #663d16;
@@ -159,6 +160,11 @@ background-color: var(--purple);
 
     .black {
 background-color: var(--black);
+    }
+
+    .yellow {
+background-color: var(--yellow);
+      color: black;
     }
 
     .navy {
