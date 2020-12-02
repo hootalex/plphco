@@ -13,7 +13,7 @@ var featured = [
   
 ["This Website", "Website", "2020", "https://polyphony.nyc"], 
 
-["Whirly Birdie", "Typeface/Website", "2020", "https://whirlybirdie.com"],
+["Whirly Birdie", "Typeface/Website", "2020", "#"],
   
 ["Cooper IDS", "Posters/Identity", "2017", "https://fontsinuse.com/uses/18491/the-cooper-union-intra-disciplinary-seminar-f"],
   
@@ -36,11 +36,24 @@ var stat = [
   "all aboard",
   "sleeping",
   "on time",
+  "on time",
+  "on time",
   "<span class='blink'>blinking</span>",
   "thinking",
   "eating",
   "early",
   "reading",
+  "dreaming",
+  "showering",
+  "glowing",
+  "writing",
+  "collecting",
+  "learning",
+  "waiting",
+  "drinking",
+  "delayed",
+  "working",
+  "wondering",
   ""
 ];
 

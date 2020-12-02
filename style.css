@@ -68,7 +68,7 @@ display: flex;
     }
     
     .col div {
-  padding: 20px;
+  padding: 15px;
 
 }
     
@@ -100,7 +100,8 @@ font-weight: bold;
 }
 
 .col:hover {
-opacity: .9;
+/* opacity: .9; */
+transform: translateY(-2px);
 }
 
 h1 {
@@ -112,7 +113,7 @@ font-size: 20px;
 }
 
 .col {
-font-size: 16px;
+font-size: 20px;
 }
 
 .status, .dep {
@@ -140,6 +141,7 @@ opacity: 0;
     flex-direction: row;
     justify-content: space-between;
     padding: 15px;
+  padding-top: 20px;
 }
 
 .blink {
