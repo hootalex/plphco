@@ -100,8 +100,7 @@ font-weight: bold;
 }
 
 .col:hover {
-/* opacity: .9; */
-transform: translateY(-2px);
+  opacity: .95;
 }
 
 h1 {
