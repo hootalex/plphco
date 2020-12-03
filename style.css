@@ -113,6 +113,8 @@ font-size: 20px;
 
 .col {
 font-size: 20px;
+  transition: .5s;
+  transition-property: transform;
 }
 
 .status, .dep {
@@ -133,6 +135,7 @@ font-variation-settings: "anim" 100;
 
 .zo {
 opacity: 0;
+transform: translate(0,15px);
 }
 
 .header {
